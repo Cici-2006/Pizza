@@ -2,9 +2,9 @@ package com.PizzaStore;
 
 public class Main2 {
     public static void main(String[] args)throws Exception {
-        PizzaPrograme sliceOHeaven = new PizzaPrograme();
-        sliceOHeaven.takeOder("1234","set meal","30","orange");
-        sliceOHeaven.makePizza("flour and beaf","20","6");
+        SliceOHeaven sliceOHeaven = new SliceOHeaven();
+        sliceOHeaven.takeOder("DEF-SOH-099","set meal",15.00,"orange");
+        sliceOHeaven.makePizza("Mozzarella Cheese","10","6-inch");
     }
 
 }
