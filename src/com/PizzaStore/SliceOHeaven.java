@@ -75,28 +75,28 @@ public class SliceOHeaven {
     }
     System.out.println("Your order is ready！");
 
-    printReceipt();
+
     }
     public void makePizza(String ingredients,String price,String side){
         pizzaIngredients = ingredients;
         pizzaPrice = price;
         sides = side;
-        System.out.println("Make Pizza");
-        System.out.println("ingredients:"+" "+ pizzaIngredients);
-        System.out.println("sides:" +" "+ sides );
-        System.out.println("pizzaPrize:"+" "+pizzaPrice);
+        printReceipt();
 
     }
 
     private void printReceipt() {
         System.out.println("********RECEIPT********");
-
         System.out.println("Oder ID:" + oderID);
         System.out.println("Oder menu:" + storeMenu);
         System.out.println("your drinks:" + drinks);
         System.out.println("Oder Total:" + oderTotal);
-
+        System.out.println("Make Pizza");
+        System.out.println("ingredients:"+" "+ pizzaIngredients);
+        System.out.println("sides:" +" "+ sides );
+        System.out.println("pizzaPrize:"+" "+pizzaPrice);
     }
+
 }
 
 
