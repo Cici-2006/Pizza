@@ -1,6 +1,20 @@
 package com.PizzaStore;
 
+import java.util.Objects;
+
 public class SliceOHeaven {
+    private int cardLength;
+
+    private String blacklistNumber = new String("12345678901234");
+    private String pizzaOfTheDay;
+    private String sideOfTheDay;
+    private String specialOfTheDay;
+    private String cardNumber;
+    private String expiryDate;
+    private int cvv;
+    public  int firstCardDigit;
+    public int lastFourDigits;
+    public String cardNumberToDisplay;
 
     public String storeName;
     public String storeAdress;
@@ -15,6 +29,7 @@ public class SliceOHeaven {
 
     private String oderID = "DEF-SOH-099";
     private double oderTotal = 15.00;
+
 
     public SliceOHeaven(String oderID,String pizzaIngredients,double oderTotal,String pizzaPrice,String sides,String drinks){
         this.oderID = oderID;
@@ -97,7 +112,40 @@ public class SliceOHeaven {
         System.out.println("pizzaPrize:"+" "+pizzaPrice);
     }
 
+    public  void processCardPayment(String cardNumber){
+        this.cardNumber = cardNumber;
+        cardLength = cardNumber.length();
+        if(cardLength == 14) {
+            System.out.println("Card accepted");
+        } else {
+            System.out.println("Invalid card");
+        }
+
+
+        int firstCardDigit= Integer.parseInt(cardNumber.substring(0,1));
+
+
+        if(cardNumber.equals(blacklistNumber)){
+            System.out.println("Card is blacklisted.Please use another card");
+        }
+
+        String lastFourDigits = String.valueOf(Integer.parseInt(cardNumber.substring(10, 14)));
+        cardNumberToDisplay = firstCardDigit+"*********"+lastFourDigits;
+        System.out.println(cardNumberToDisplay);
+    }
+
+    public void specialOfTheDay(String pizzaOfTheDay,String sideOfTheDay,String specialPrice){
+
+        System.out.println("Today's special offer:");
+        System.out.println("Pizza of the day:"+pizzaOfTheDay);
+        System.out.println("Side of the day:"+sideOfTheDay);
+        System.out.println("Specialprice:"+specialPrice);
+    }
 }
+
+
+
+
 
 
 
