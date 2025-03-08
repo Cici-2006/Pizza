@@ -5,11 +5,10 @@ import com.PizzaStore.SliceOHeaven;
 public class Main {
     public static void main(String[] args)throws Exception {
         SliceOHeaven sliceOHeaven = new SliceOHeaven();
+        sliceOHeaven.specialOfTheDay("cheese pizza","pineapple","5");
         sliceOHeaven.takeOder();
-//        sliceOHeaven.makePizza("Mozzarella Cheese","10","6-inch");
-//        sliceOHeaven.specialOfTheDay("cheese pizza","pineapple","5");
-//        sliceOHeaven.processCardPayment(Long.parseLong("12345678124565"),123,"2026-09");
-//        sliceOHeaven.makeCardPayment();
+        sliceOHeaven.makePizza("10");
+        System.out.println(sliceOHeaven.toString());
 
     }
 
